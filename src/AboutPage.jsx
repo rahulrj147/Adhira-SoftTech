@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Footer from './Footer';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import Navbar from './Navbar';
 export default function About() {
   const [activeSection, setActiveSection] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -51,23 +54,83 @@ export default function About() {
   const testimonials = [
     {
       name: "Nikita Sharma",
-      role: "HR Director, TechCorp",
-      content: "Adira Softtech transformed our hiring process. Their attention to detail and quality of candidates is unmatched.",
+      role: "Sr Software Engineer, Spinny",
+      content: "aadira Softtech transformed our hiring process. Their attention to detail and quality of candidates is unmatched.",
       rating: 5
     },
     {
       name: "Rajesh Gupta",
-      role: "CEO, InnovateLabs",
-      content: "The training programs delivered by Adira have significantly improved our team's performance and productivity.",
+      role: "HR Specialist, Techbulls",
+      content: "The training programs delivered by aadira have significantly improved our team's performance and productivity.",
       rating: 5
     },
     {
       name: "Sita Patel",
-      role: "Operations Manager, GlobalTech",
-      content: "Professional, efficient, and results-driven. Adira is our go-to partner for all recruitment needs.",
+      role: "Operations Manager, Allianz",
+      content: "Professional, efficient, and results-driven. aadira is our go-to partner for all recruitment needs.",
+      rating: 4
+    },
+    {
+      name: "Anil Verma",
+      role: "Devops Engineer, HDFC Sales",
+      content: "Their expertise in technical recruitment is exceptional. They understand our needs and deliver every time.",
+      rating: 5
+    },
+    {
+      name: "Priya Singh",
+      role: "Training Coordinator, Marlabs",
+      content: "The corporate training sessions were engaging and highly beneficial for our employees. Highly recommend!",
+      rating: 5
+    },
+    {
+      name: "Rohan Mehta",
+      role: "Product Manager, Transcom",
+      content: "aadira Softtech's team is dedicated and professional. They helped us find the perfect candidates quickly.",
+      rating: 4
+    },
+    {
+      name: "Aditi Rao",
+      role: "Marketing Head, Dotsquares",
+      content: "Their recruitment solutions are tailored to our needs. We appreciate their commitment to quality.",
+      rating: 5
+    },
+    {
+      name: "Sneha Kapoor",
+      role: "Business Analyst, Mindhind",
+      content: "The training programs were insightful and practical. Our team gained valuable skills that we apply daily.",
+      rating: 5
+    },
+    {
+      name: "Vikram Desai",
+      role: "Engineering Manager, Transcom",
+      content: "aadira Softtech has been instrumental in building our team. Their understanding of the tech industry is impressive.",
+      rating: 5
+    },
+    {
+      name: "Kavita Joshi",
+      role: "Recruitment Lead, Niftel",
+      content: "Their personalized approach to recruitment sets them apart. We trust aadira with our most critical hires.",
       rating: 5
     }
   ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const itemsPerPage = 4;
+  const totalPages = Math.ceil(testimonials.length / itemsPerPage);
+
+  const nextTestimonial = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % totalPages);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + totalPages) % totalPages);
+  };
+
+  const getCurrentTestimonials = () => {
+    const startIndex = currentIndex * itemsPerPage;
+    return testimonials.slice(startIndex, startIndex + itemsPerPage);
+  };
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
@@ -112,7 +175,7 @@ export default function About() {
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
           <div className="mb-8 animate-fade-in">
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">
-              Adira Softtech
+              Aadira Softtech
             </h1>
             <div className="h-1 w-32 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-8 animate-pulse" />
           </div>
@@ -178,7 +241,7 @@ export default function About() {
               
               <div className="space-y-6 text-lg leading-relaxed text-gray-300">
                 <p className="hover:text-white transition-colors duration-300">
-                  Founded in <span className="text-purple-400 font-semibold">2014</span>, Adira Softtech has grown from a small team of dedicated professionals into a leading recruitment powerhouse, built on principles of integrity, passion, and relentless pursuit of excellence.
+                  Founded in <span className="text-purple-400 font-semibold">2014</span>, aadira Softtech has grown from a small team of dedicated professionals into a leading recruitment powerhouse, built on principles of integrity, passion, and relentless pursuit of excellence.
                 </p>
                 <p className="hover:text-white transition-colors duration-300">
                   Our <span className="text-pink-400 font-semibold">all-female recruiter team</span> brings unparalleled expertise and agility, comprising HR professionals with extensive experience in top MNCs, uniquely skilled to deliver quality candidates in record time.
@@ -291,7 +354,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Why Choose Adira?
+              Why Choose aadira?
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto" />
           </div>
@@ -320,38 +383,81 @@ export default function About() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 relative">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Client Stories
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto" />
-          </div>
+        <section className="py-20 relative">
+      <div className=" mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Client Stories
+          </h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto" />
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto">
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevTestimonial}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 z-10 bg-gradient-to-br from-slate-800/50 to-slate-700/50 hover:from-slate-700/50 hover:to-slate-600/50 text-white p-3 rounded-full border border-white/10 hover:border-purple-400/50 backdrop-blur-sm transition-all duration-300 hover:scale-110"
+            aria-label="Previous testimonials"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          
+          <button
+            onClick={nextTestimonial}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 z-10 bg-gradient-to-br from-slate-800/50 to-slate-700/50 hover:from-slate-700/50 hover:to-slate-600/50 text-white p-3 rounded-full border border-white/10 hover:border-purple-400/50 backdrop-blur-sm transition-all duration-300 hover:scale-110"
+            aria-label="Next testimonials"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="group hover:scale-105 transition-all duration-500">
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-3xl p-8 backdrop-blur-sm border border-white/10 hover:border-purple-400/50 h-full">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400 text-xl group-hover:animate-pulse" style={{ animationDelay: `${i * 0.1}s` }}>⭐</span>
-                    ))}
-                  </div>
-                  <p className="text-gray-300 italic mb-6 leading-relaxed group-hover:text-white transition-colors duration-300">
-                    "{testimonial.content}"
-                  </p>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-purple-400 text-sm">{testimonial.role}</div>
+          {/* Testimonials Grid */}
+          <div className="overflow-hidden">
+            <div className="grid md:grid-cols-4 gap-8 transition-all duration-500">
+              {getCurrentTestimonials().map((testimonial, index) => (
+                <div key={currentIndex * itemsPerPage + index} className="group hover:scale-105 transition-all duration-500">
+                  <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-3xl p-8 backdrop-blur-sm border border-white/10 hover:border-purple-400/50 h-full">
+                    <div className="flex mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <span 
+                          key={i} 
+                          className="text-yellow-400 text-xl group-hover:animate-pulse" 
+                          style={{ animationDelay: `${i * 0.1}s` }}
+                        >
+                          ⭐
+                        </span>
+                      ))}
+                    </div>
+                    <p className="text-gray-300 italic mb-6 leading-relaxed group-hover:text-white transition-colors duration-300">
+                      "{testimonial.content}"
+                    </p>
+                    <div>
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="text-purple-400 text-sm">{testimonial.role}</div>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-3">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex
+                    ? "bg-gradient-to-r from-purple-400 to-pink-400 scale-125"
+                    : "bg-white/20 hover:bg-white/40"
+                }`}
+                aria-label={`Go to page ${index + 1}`}
+              />
             ))}
           </div>
         </div>
-      </section>
-
+      </div>
+    </section>
       {/* CTA Section */}
       <section className="py-20 relative">
         <div className="max-w-4xl mx-auto px-4 text-center">

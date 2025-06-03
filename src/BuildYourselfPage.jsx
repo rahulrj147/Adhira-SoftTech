@@ -74,36 +74,7 @@ export default function BuildYourselfPage() {
     }
   ];
 
-  const successStories = [
-    {
-      name: "Priya Sharma",
-      role: "Software Engineer → Tech Lead",
-      growth: "200% salary increase",
-      story: "Transformed from junior developer to team lead in 18 months through our mentorship program.",
-      avatar: "👩‍💻"
-    },
-    {
-      name: "Rajesh Kumar",
-      role: "Analyst → Data Scientist",
-      growth: "Career Transition",
-      story: "Successfully transitioned to data science with our comprehensive training and placement support.",
-      avatar: "👨‍🔬"
-    },
-    {
-      name: "Anita Verma",
-      role: "Manager → Director",
-      growth: "Leadership Excellence",
-      story: "Developed executive presence and strategic thinking skills to reach C-suite level.",
-      avatar: "👩‍💼"
-    }
-  ];
 
-  const mentorshipFeatures = [
-    { icon: "🎓", title: "Expert Mentors", desc: "Industry professionals with 10+ years experience" },
-    { icon: "📈", title: "Personalized Plans", desc: "Customized development roadmaps for your goals" },
-    { icon: "🤝", title: "1:1 Sessions", desc: "Regular one-on-one guidance and feedback" },
-    { icon: "🏆", title: "Certification", desc: "Industry-recognized certificates upon completion" }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white overflow-hidden">
@@ -272,71 +243,9 @@ export default function BuildYourselfPage() {
         </div>
       </section>
 
-      {/* Success Stories */}
-      <section className="py-20 relative">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Success Stories
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-6" />
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real transformations from our community members
-            </p>
-          </div>
+     
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {successStories.map((story, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-3xl p-6 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-6xl mb-4">{story.avatar}</div>
-                  <h3 className="text-xl font-bold text-white mb-1">{story.name}</h3>
-                  <p className="text-purple-400 font-semibold mb-2">{story.role}</p>
-                  <div className="inline-block px-3 py-1 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full">
-                    <span className="text-green-400 text-sm font-semibold">{story.growth}</span>
-                  </div>
-                </div>
-                <p className="text-gray-300 italic leading-relaxed">
-                  "{story.story}"
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mentorship Program */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Mentorship Program
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-6" />
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Personalized guidance from industry experts to accelerate your growth
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {mentorshipFeatures.map((feature, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl p-6 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 group-hover:scale-105">
-                  <div className="text-4xl mb-4 group-hover:animate-bounce">{feature.icon}</div>
-                  <h3 className="text-lg font-bold text-white mb-2">{feature.title}</h3>
-                  <p className="text-gray-400 text-sm">{feature.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Apply for Mentorship
-            </button>
-          </div>
-        </div>
-      </section>
+     
 
       {/* CTA Section */}
       <section className="py-20 relative">

@@ -77,19 +77,19 @@ export default function OurServices() {
 
   const testimonials = [
     {
-      quote: "Adhira Softtech transformed our hiring process. Their expertise in IT recruitment is unmatched.",
+      quote: "aadira Softtech transformed our hiring process. Their expertise in IT recruitment is unmatched.",
       author: "Sarah Johnson",
       position: "HR Director, TechCorp",
       avatar: "👩‍💼"
     },
     {
-      quote: "The quality of candidates provided by Adhira exceeded our expectations. Highly recommended!",
+      quote: "The quality of candidates provided by aadira exceeded our expectations. Highly recommended!",
       author: "Michael Chen",
       position: "CEO, InnovateLabs",
       avatar: "👨‍💻"
     },
     {
-      quote: "Professional, efficient, and results-driven. Adhira is our go-to partner for all staffing needs.",
+      quote: "Professional, efficient, and results-driven. aadira is our go-to partner for all staffing needs.",
       author: "Emma Williams",
       position: "Talent Manager, GlobalTech",
       avatar: "👩‍🔬"

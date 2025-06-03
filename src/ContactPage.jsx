@@ -39,14 +39,14 @@ export default function ContactPage() {
       icon: "📧",
       title: "Send us an Email",
       subtitle: "Don't hesitate to mail",
-      details: "contact@adirasofttech.com",
+      details: "adirasofttech@outlook.com ,  adirasofttech@gmail.com ",
       color: "from-pink-600 to-pink-800"
     },
     {
       icon: "📞",
       title: "Call Us Now",
       subtitle: "Call us for more information",
-      details: "+91-8383828124",
+      details: "+91-8383828124 / 6306776480 / 9264977545",
       color: "from-cyan-600 to-cyan-800"
     }
   ];

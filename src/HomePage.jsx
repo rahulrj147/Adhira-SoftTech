@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, Users, Target, Award, ArrowRight, Menu, X, Star, CheckCircle, Phone, Mail, MapPin, Calendar, TrendingUp, Briefcase, GraduationCap } from 'lucide-react';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import CompaniesCarousel from './CompaniesCarousel';
 
 const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -154,6 +155,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <CompaniesCarousel/>
 
       {/* About Section */}
       <section className="py-20 relative">
@@ -165,11 +167,11 @@ const HomePage = () => {
                 <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">
                   About
                 </span>
-                <span className="text-white"> Adira Softtech</span>
+                <span className="text-white"> aadira Softtech</span>
               </h2>
               
               <p className="text-gray-300 text-lg leading-relaxed">
-                Founded in 2014, Adira Softtech was built on the principles of integrity, passion, and a relentless pursuit of excellence. Over the past decade, we have grown from a small team of dedicated professionals into a leading recruitment agency.
+                Founded in 2014, aadira Softtech was built on the principles of integrity, passion, and a relentless pursuit of excellence. Over the past decade, we have grown from a small team of dedicated professionals into a leading recruitment agency.
               </p>
               
               <div className="space-y-4">
@@ -247,83 +249,61 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Hire Dedicated Developers */}
       <section className="py-20 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/60 to-purple-900/40"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text">Get In </span>
-              <span className="text-white">Touch</span>
+            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Hire Dedicated Developers
             </h2>
-            <p className="text-gray-300 text-lg">
-              Ready to transform your recruitment process? Let's discuss your needs.
+            <div className="h-1 w-20 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-6" />
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Connect with skilled professionals ready to bring your projects to life
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div className="flex items-center space-x-4 p-6 bg-gradient-to-br from-purple-900/30 to-purple-700/30 rounded-3xl border border-white/10 hover:border-white/30 transition-colors duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
-                  <Phone className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold">Phone</h3>
-                  <p className="text-gray-300">+91 8383828124</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+            {[
+              { name: "Flutter Developer", icon: "📱", color: "from-blue-500/20 to-cyan-500/20" },
+              { name: "Android Developer", icon: "🤖", color: "from-green-500/20 to-emerald-500/20" },
+              { name: "Laravel Developer", icon: "🔧", color: "from-red-500/20 to-orange-500/20" },
+              { name: "Java Developer", icon: "☕", color: "from-orange-500/20 to-amber-500/20" },
+              { name: "Node JS Developer", icon: "🟢", color: "from-green-600/20 to-lime-500/20" },
+              { name: "Scrum Master", icon: "📋", color: "from-purple-500/20 to-violet-500/20" },
+              { name: "Kotlin Developer", icon: "🎯", color: "from-indigo-500/20 to-purple-500/20" },
+              { name: "Blockchain Developer", icon: "⛓️", color: "from-yellow-500/20 to-orange-500/20" },
+              { name: "UI UX Developer", icon: "🎨", color: "from-pink-500/20 to-rose-500/20" },
+              { name: "Solidity Developer", icon: "💎", color: "from-cyan-500/20 to-teal-500/20" },
+              { name: "Shopify Developer", icon: "🛍️", color: "from-green-500/20 to-teal-500/20" },
+              { name: "Metaverse Developer", icon: "🥽", color: "from-purple-500/20 to-pink-500/20" },
+              { name: "Webflow Developer", icon: "🌐", color: "from-blue-500/20 to-indigo-500/20" },
+              { name: "Angular Developer", icon: "🅰️", color: "from-red-500/20 to-pink-500/20" },
+              { name: "Dot Net Developer", icon: "🔷", color: "from-blue-600/20 to-cyan-500/20" },
+              { name: "WordPress Developer", icon: "📝", color: "from-slate-500/20 to-gray-500/20" },
+              { name: "QA Engineer", icon: "🔍", color: "from-yellow-500/20 to-amber-500/20" },
+              { name: "iOS Developer", icon: "🍎", color: "from-gray-500/20 to-slate-500/20" },
+              { name: "DevOps Developer", icon: "⚙️", color: "from-orange-500/20 to-red-500/20" },
+              { name: "Python Developer", icon: "🐍", color: "from-blue-500/20 to-green-500/20" },
+              { name: "MEAN Developer", icon: "📊", color: "from-green-500/20 to-blue-500/20" },
+              { name: "Magento Developer", icon: "🛒", color: "from-orange-500/20 to-red-500/20" },
+              { name: "Data Scientist", icon: "📈", color: "from-purple-500/20 to-blue-500/20" },
+              { name: "Data Engineer", icon: "🔢", color: "from-cyan-500/20 to-blue-500/20" },
+              { name: "React Developer", icon: "🔄", color: "from-cyan-500/20 to-blue-500/20" },
+            ].map((developer, index) => (
+              <div key={index} className="group cursor-pointer">
+                <div className={`bg-gradient-to-br ${developer.color} rounded-2xl p-4 backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg text-center h-full flex flex-col justify-center`}>
+                  <div className="text-3xl mb-3 group-hover:animate-bounce transition-transform duration-300">
+                    {developer.icon}
+                  </div>
+                  <h3 className="text-sm font-semibold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-300 leading-tight">
+                    {developer.name}
+                  </h3>
                 </div>
               </div>
-
-              <div className="flex items-center space-x-4 p-6 bg-gradient-to-br from-pink-900/30 to-pink-700/30 rounded-3xl border border-white/10 hover:border-white/30 transition-colors duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-600 to-cyan-600 rounded-full flex items-center justify-center">
-                  <Mail className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold">Email</h3>
-                  <p className="text-gray-300">info@adirasofttech.com</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-4 p-6 bg-gradient-to-br from-cyan-900/30 to-cyan-700/30 rounded-3xl border border-white/10 hover:border-white/30 transition-colors duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full flex items-center justify-center">
-                  <MapPin className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold">Location</h3>
-                  <p className="text-gray-300">Lucknow, Uttar Pradesh</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-3xl p-8 backdrop-blur-sm border border-white/10">
-              <div className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-300"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-300"
-                  />
-                </div>
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-300"
-                />
-                <textarea
-                  rows="4"
-                  placeholder="Your Message"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-300 resize-none"
-                ></textarea>
-                <button className="w-full py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl">
-                  Send Message
-                </button>
-              </div>
-            </div>
+            ))}
           </div>
+
+          
         </div>
       </section>
 

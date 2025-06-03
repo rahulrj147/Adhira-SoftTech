@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="container mx-auto px-6">
           <div className="text-center text-white mb-16">
             <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Adhira Softtech
+              aadira Softtech
             </h1>
             <p className="text-xl opacity-80">Building Tomorrow's Workforce Today</p>
           </div>
@@ -59,7 +59,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                      Adhira Softtech
+                      aadira Softtech
                     </h2>
                     <p className="text-sm text-gray-300">Since 2014</p>
                   </div>
@@ -106,7 +106,8 @@ export default function Footer() {
                     </div>
                     <div>
                       <p className="text-white font-medium">+91 8383828124</p>
-                      <p className="text-white font-medium">+91 9793076480</p>
+                      <p className="text-white font-medium">+91 6306776480</p>
+                      <p className="text-white font-medium">+91 9264977545</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3 group">
@@ -114,8 +115,8 @@ export default function Footer() {
                       <Mail className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <p className="text-white font-medium">info@adirasofttech.com</p>
-                      <p className="text-white font-medium">adirasofttech@gmail.com</p>
+                      <p className="text-white font-medium">adirasofttech@outlook.com </p>
+                      <p className="text-white font-medium">adirasofttech@gmail.com </p>
                     </div>
                   </div>
                 </div>
@@ -187,7 +188,7 @@ export default function Footer() {
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <div className="text-center md:text-left">
                   <p className="text-gray-300 text-sm">
-                    © 2025 Adhira Softtech. All Rights Reserved | Managed by 
+                    © 2025 aadira Softtech. All Rights Reserved | Managed by 
                     <span className="text-purple-400 font-semibold ml-1">CodeEternity</span>
                   </p>
                 </div>

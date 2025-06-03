@@ -66,7 +66,12 @@ export default function Navbar() {
           
           {/* Logo */}
           <div className="flex items-center space-x-3 group cursor-pointer">
-           <img src={logo} alt="Adhira Softtech Logo" className="w-auto h-16 rounded-full" />
+           <img src={logo} alt="aadira Softtech Logo" className="w-auto h-16 rounded-full" />
+           <div className='flex flex-col ' >
+            <span className="text-white font-bold text-2xl">Aadira </span>
+            <span className="text-white font-bold text-2xl">Softtech</span>
+           
+           </div>
           </div>
 
           {/* Desktop Navigation */}

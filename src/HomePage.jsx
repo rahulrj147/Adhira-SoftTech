@@ -10,6 +10,62 @@ const HomePage = () => {
   const [scrollY, setScrollY] = useState(0);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+
+   const [activeTab, setActiveTab] = useState("management");
+
+  const techDevelopers = [
+    { name: "Flutter Developer", icon: "📱", color: "from-blue-500/20 to-cyan-500/20" },
+    { name: "Android Developer", icon: "🤖", color: "from-green-500/20 to-emerald-500/20" },
+    { name: "Laravel Developer", icon: "🔧", color: "from-red-500/20 to-orange-500/20" },
+    { name: "Java Developer", icon: "☕", color: "from-orange-500/20 to-amber-500/20" },
+    { name: "Node JS Developer", icon: "🟢", color: "from-green-600/20 to-lime-500/20" },
+    { name: "Kotlin Developer", icon: "🎯", color: "from-indigo-500/20 to-purple-500/20" },
+    { name: "Blockchain Developer", icon: "⛓️", color: "from-yellow-500/20 to-orange-500/20" },
+    { name: "UI UX Developer", icon: "🎨", color: "from-pink-500/20 to-rose-500/20" },
+    { name: "Solidity Developer", icon: "💎", color: "from-cyan-500/20 to-teal-500/20" },
+    { name: "Shopify Developer", icon: "🛍️", color: "from-green-500/20 to-teal-500/20" },
+    { name: "Metaverse Developer", icon: "🥽", color: "from-purple-500/20 to-pink-500/20" },
+    { name: "Webflow Developer", icon: "🌐", color: "from-blue-500/20 to-indigo-500/20" },
+    { name: "Angular Developer", icon: "🅰️", color: "from-red-500/20 to-pink-500/20" },
+    { name: "Dot Net Developer", icon: "🔷", color: "from-blue-600/20 to-cyan-500/20" },
+    { name: "WordPress Developer", icon: "📝", color: "from-slate-500/20 to-gray-500/20" },
+    { name: "QA Engineer", icon: "🔍", color: "from-yellow-500/20 to-amber-500/20" },
+    { name: "iOS Developer", icon: "🍎", color: "from-gray-500/20 to-slate-500/20" },
+    { name: "DevOps Developer", icon: "⚙️", color: "from-orange-500/20 to-red-500/20" },
+    { name: "Python Developer", icon: "🐍", color: "from-blue-500/20 to-green-500/20" },
+    { name: "MEAN Developer", icon: "📊", color: "from-green-500/20 to-blue-500/20" },
+    { name: "Magento Developer", icon: "🛒", color: "from-orange-500/20 to-red-500/20" },
+    { name: "Data Scientist", icon: "📈", color: "from-purple-500/20 to-blue-500/20" },
+    { name: "Data Engineer", icon: "🔢", color: "from-cyan-500/20 to-blue-500/20" },
+    { name: "React Developer", icon: "🔄", color: "from-cyan-500/20 to-blue-500/20" },
+  ];
+
+  const managementRoles = [
+    { name: "Scrum Master", icon: "📋", color: "from-purple-500/20 to-violet-500/20" },
+    { name: "Project Manager", icon: "👨‍💼", color: "from-blue-500/20 to-indigo-500/20" },
+    { name: "Product Manager", icon: "📊", color: "from-green-500/20 to-teal-500/20" },
+    { name: "Business Analyst", icon: "📈", color: "from-orange-500/20 to-amber-500/20" },
+    { name: "Team Lead", icon: "👥", color: "from-purple-500/20 to-pink-500/20" },
+    { name: "Tech Lead", icon: "🔧", color: "from-red-500/20 to-orange-500/20" },
+    { name: "Delivery Manager", icon: "🚀", color: "from-cyan-500/20 to-blue-500/20" },
+    { name: "Program Manager", icon: "🎯", color: "from-indigo-500/20 to-purple-500/20" },
+    { name: "Release Manager", icon: "📦", color: "from-green-600/20 to-lime-500/20" },
+    { name: "Operations Manager", icon: "⚙️", color: "from-gray-500/20 to-slate-500/20" },
+    { name: "Quality Manager", icon: "✅", color: "from-emerald-500/20 to-green-500/20" },
+    { name: "Risk Manager", icon: "🛡️", color: "from-yellow-500/20 to-orange-500/20" },
+    { name: "Strategy Consultant", icon: "🧭", color: "from-pink-500/20 to-rose-500/20" },
+    { name: "Agile Coach", icon: "🏃‍♂️", color: "from-blue-600/20 to-cyan-500/20" },
+    { name: "Change Manager", icon: "🔄", color: "from-violet-500/20 to-purple-500/20" },
+    { name: "Resource Manager", icon: "👤", color: "from-teal-500/20 to-cyan-500/20" },
+    { name: "Client Manager", icon: "🤝", color: "from-rose-500/20 to-pink-500/20" },
+    { name: "Portfolio Manager", icon: "💼", color: "from-slate-500/20 to-gray-500/20" },
+    { name: "Innovation Manager", icon: "💡", color: "from-amber-500/20 to-yellow-500/20" },
+    { name: "Digital Strategist", icon: "🌐", color: "from-indigo-500/20 to-blue-500/20" },
+  ];
+
+  const currentData = activeTab === "technology" ? techDevelopers : managementRoles;
+
+
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     const handleMouseMove = (e) => {
@@ -250,62 +306,61 @@ const HomePage = () => {
       </section>
 
       {/* Hire Dedicated Developers */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Hire Dedicated Developers
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-6" />
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with skilled professionals ready to bring your projects to life
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-            {[
-              { name: "Flutter Developer", icon: "📱", color: "from-blue-500/20 to-cyan-500/20" },
-              { name: "Android Developer", icon: "🤖", color: "from-green-500/20 to-emerald-500/20" },
-              { name: "Laravel Developer", icon: "🔧", color: "from-red-500/20 to-orange-500/20" },
-              { name: "Java Developer", icon: "☕", color: "from-orange-500/20 to-amber-500/20" },
-              { name: "Node JS Developer", icon: "🟢", color: "from-green-600/20 to-lime-500/20" },
-              { name: "Scrum Master", icon: "📋", color: "from-purple-500/20 to-violet-500/20" },
-              { name: "Kotlin Developer", icon: "🎯", color: "from-indigo-500/20 to-purple-500/20" },
-              { name: "Blockchain Developer", icon: "⛓️", color: "from-yellow-500/20 to-orange-500/20" },
-              { name: "UI UX Developer", icon: "🎨", color: "from-pink-500/20 to-rose-500/20" },
-              { name: "Solidity Developer", icon: "💎", color: "from-cyan-500/20 to-teal-500/20" },
-              { name: "Shopify Developer", icon: "🛍️", color: "from-green-500/20 to-teal-500/20" },
-              { name: "Metaverse Developer", icon: "🥽", color: "from-purple-500/20 to-pink-500/20" },
-              { name: "Webflow Developer", icon: "🌐", color: "from-blue-500/20 to-indigo-500/20" },
-              { name: "Angular Developer", icon: "🅰️", color: "from-red-500/20 to-pink-500/20" },
-              { name: "Dot Net Developer", icon: "🔷", color: "from-blue-600/20 to-cyan-500/20" },
-              { name: "WordPress Developer", icon: "📝", color: "from-slate-500/20 to-gray-500/20" },
-              { name: "QA Engineer", icon: "🔍", color: "from-yellow-500/20 to-amber-500/20" },
-              { name: "iOS Developer", icon: "🍎", color: "from-gray-500/20 to-slate-500/20" },
-              { name: "DevOps Developer", icon: "⚙️", color: "from-orange-500/20 to-red-500/20" },
-              { name: "Python Developer", icon: "🐍", color: "from-blue-500/20 to-green-500/20" },
-              { name: "MEAN Developer", icon: "📊", color: "from-green-500/20 to-blue-500/20" },
-              { name: "Magento Developer", icon: "🛒", color: "from-orange-500/20 to-red-500/20" },
-              { name: "Data Scientist", icon: "📈", color: "from-purple-500/20 to-blue-500/20" },
-              { name: "Data Engineer", icon: "🔢", color: "from-cyan-500/20 to-blue-500/20" },
-              { name: "React Developer", icon: "🔄", color: "from-cyan-500/20 to-blue-500/20" },
-            ].map((developer, index) => (
-              <div key={index} className="group cursor-pointer">
-                <div className={`bg-gradient-to-br ${developer.color} rounded-2xl p-4 backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg text-center h-full flex flex-col justify-center`}>
-                  <div className="text-3xl mb-3 group-hover:animate-bounce transition-transform duration-300">
-                    {developer.icon}
-                  </div>
-                  <h3 className="text-sm font-semibold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-300 leading-tight">
-                    {developer.name}
-                  </h3>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          
+      <section className="py-20 relative bg-gray-900">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            Hire Dedicated Developers
+          </h2>
+          <div className="h-1 w-20 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto mb-6" />
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Connect with skilled professionals ready to bring your projects to life
+          </p>
         </div>
-      </section>
+
+        {/* Tab Navigation */}
+        <div className="flex justify-center mb-12">
+          <div className="bg-gray-800/50 backdrop-blur-sm rounded-full p-1 border border-white/10">
+            <button
+              onClick={() => setActiveTab("management")}
+              className={`px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
+                activeTab === "management"
+                  ? "bg-gradient-to-r from-purple-400 to-pink-400 text-white shadow-lg"
+                  : "text-gray-300 hover:text-white"
+              }`}
+            >
+              Management
+            </button>
+            <button
+              onClick={() => setActiveTab("technology")}
+              className={`px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300 ${
+                activeTab === "tech"
+                  ? "bg-gradient-to-r from-purple-400 to-pink-400 text-white shadow-lg"
+                  : "text-gray-300 hover:text-white"
+              }`}
+            >
+              Technology
+            </button>
+          </div>
+        </div>
+
+        {/* Content Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          {currentData.map((item, index) => (
+            <div key={index} className="group cursor-pointer">
+              <div className={`bg-gradient-to-br ${item.color} rounded-2xl p-4 backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg text-center h-full flex flex-col justify-center`}>
+                <div className="text-3xl mb-3 group-hover:animate-bounce transition-transform duration-300">
+                  {item.icon}
+                </div>
+                <h3 className="text-sm font-semibold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400 group-hover:bg-clip-text transition-all duration-300 leading-tight">
+                  {item.name}
+                </h3>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
       <style jsx>{`
         @keyframes fade-in {
